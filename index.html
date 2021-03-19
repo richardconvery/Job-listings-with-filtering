@@ -6,7 +6,34 @@
   <link rel="stylesheet" href="resources/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
+  <!-- Handlebars for jobs -->
+  <script id="jobs" type="text/x-handlebars-template">
+    {{#each jobs}}
+      <div id="jobs-container">
+        <div class="job-card">
+          <div class="company-logo"><img src="resources/{{this.logo}}" alt="Photosnap"></div>
+          <div class="job-details">
+            <div class="company-name"><p>{{this.company}}</p></div>
+            <div class="job-highlights">
+              <p>{{this.new}}</p>
+              <p>{{this.featured}}</p>
+            </div>
+            <div class="job-title"><h2>{{this.position}}</h2></div>
+            <div class="job-info">
+              <p>{{this.postedAt}}</p>
+              <p>{{this.contract}}</p>
+              <p>{{this.location}}</p>
+            </div>
+          </div>
+          <div class="tags">
+            <div class="tag"><p>{{this.role}}{{this.position}}{{this.languages}}</p></div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+  </script>
 
   <title>Job Listings</title>
   <script
@@ -29,31 +56,7 @@
 
 
 <!-- Jobs -->
-<div class="jobs-container">
-  <div class="job-card">
-    <div class="company-logo"><img src="resources/images/photosnap.svg" alt="Photosnap"></div>
-    <div class="job-details">
-      <div class="company-name"><p>Photosnap</p></div>
-      <div class="job-highlights">
-        <p>NEW!</p>
-        <p>FEATURED</p>
-      </div>
-      <div class="job-title"><h2>Senior Frontend Developer</h2></div>
-      <div class="job-info">
-        <p>1d ago</p>
-        <p>Full Time</p>
-        <p>USA only</p>
-      </div>
-    </div>
-    <div class="tags">
-      <div class="tag"><p>Frontend</p></div>
-      <div class="tag"><p>Senior</p></div>
-      <div class="tag"><p>HTML</p></div>
-      <div class="tag"><p>CSS</p></div>
-      <div class="tag"><p>JavaScript</p></div>
-    </div>
-  </div>
-</div>  
+  <div id="jobs-container"></div>
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -61,27 +64,10 @@
   </style>
 </head>
 <body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="resources/js/main.js" type="text/javascript"></script> 
 </body>
 </html>
