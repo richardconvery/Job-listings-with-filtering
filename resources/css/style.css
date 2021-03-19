@@ -252,3 +252,42 @@ header {
 }
 
 /* #endregion */
+/* #region Jobs*/
+.jobs-container {
+    width: 100%;
+    display: flex;
+}
+.job-card {
+    background-color: aquamarine;
+    width: 1366px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 2fr 5fr 5fr;
+}
+.company-logo {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+.job-details {
+    display: grid;
+    grid-template: 50px 50px 50px / 1fr 2fr 1fr;
+}
+.job-highlights {
+    display: flex;
+    grid-column: 2 / span 2;
+}
+.job-title {
+    grid-column: 1 / span 3;
+    }
+.job-info {
+    grid-column: 1 / span 3;
+    display: flex;
+    }
+.tags {
+    display: flex;
+    justify-content: end;
+    }
+/* #endregion */
