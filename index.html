@@ -17,9 +17,11 @@
           <div class="company-logo"><img src="resources/{{this.logo}}" alt="Photosnap"></div>
           <div class="job-details">
             <div class="company-name cyan"><p class="company">{{this.company}}</p>
+              <!-- If new is true the display "NEW!" else do nothing -->
               {{#if this.new}}
                 <p class="new">NEW!</p>
               {{/if}}
+              <!-- If featured is true the display "FEATURED" else do nothing -->
               {{#if this.featured}}
                 <p class="featured">FEATURED</p>
               {{/if}}
@@ -32,19 +34,23 @@
             </div>
           </div>
           <div class="tags">
-            <div class="tag cyan"><p class="role">{{this.role}}</p><p class="level">{{this.level}}</p><p class="languages">{{this.languages}}</p></div>
+            <div class="tag cyan"><p class="role">{{this.role}}</p><p class="level">{{this.level}}</p>
+              <!-- Get the unique value for each tool in the array -->
+              {{#each tools}}
+                <p class="tools">{{this}}</p>
+              {{/each}}
+              <!-- Get the unique value for each language in the array -->
+              {{#each languages}}
+                <p class="languages">{{this}}</p>
+              {{/each}}
+            </div>
           </div>
         </div>
-      </div>
-      
+      </div>      
       {{/each}}
   </script>
 
   <title>Job Listings</title>
-  <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"></script>
 <!-- Header -->
 <header>
   <div class="hero-container">

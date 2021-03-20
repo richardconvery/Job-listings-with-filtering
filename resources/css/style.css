@@ -354,6 +354,8 @@ svg {
     display: flex;
     justify-content: end;
     align-items: center;
+    right: 30px;
+    position: relative;
     }
 li:nth-child(1) {
     list-style-type: none; 
@@ -368,7 +370,7 @@ li span {
     background-color: #ecf8f6;
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 .role:hover {
@@ -381,7 +383,7 @@ li span {
     background-color: #ecf8f6;
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 .level:hover {
@@ -394,10 +396,23 @@ li span {
     background-color: #ecf8f6;
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 .languages:hover {
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+}
+.tools {
+    display: inline;
+    color: hsl(180, 29%, 50%);
+    background-color: #ecf8f6;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.tools:hover {
     color: white;
     background-color: hsl(180, 29%, 50%);
 }
