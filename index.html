@@ -13,12 +13,16 @@
     {{#each jobs}}
       <div id="jobs-container">
         <div class="job-card">
+          <div class="hover-to-highlight"></div>
           <div class="company-logo"><img src="resources/{{this.logo}}" alt="Photosnap"></div>
           <div class="job-details">
-            <div class="company-name cyan"><p>{{this.company}}</p></div>
-            <div class="job-highlights">
-              <p>{{this.new}}</p>
-              <p>{{this.featured}}</p>
+            <div class="company-name cyan"><p class="company">{{this.company}}</p>
+              {{#if this.new}}
+                <p class="new">NEW!</p>
+              {{/if}}
+              {{#if this.featured}}
+                <p class="featured">FEATURED</p>
+              {{/if}}
             </div>
             <div class="job-title cyan"><h2>{{this.position}}</h2></div>
             <div class="job-info grey">
@@ -28,10 +32,11 @@
             </div>
           </div>
           <div class="tags">
-            <div class="tag cyan"><p>{{this.role}}{{this.position}}{{this.languages}}</p></div>
+            <div class="tag cyan"><p class="role">{{this.role}}</p><p class="level">{{this.level}}</p><p class="languages">{{this.languages}}</p></div>
           </div>
         </div>
       </div>
+      
       {{/each}}
   </script>
 
