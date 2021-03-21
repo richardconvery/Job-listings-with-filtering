@@ -36,15 +36,24 @@ header {
     margin-right: auto;
     height: 156px;
     }
-svg {
+#hero {
     width: 1400px;
+    max-height: 156px;
     }
 /* #endregion */
 /* #region Filters*/
+.container-fluid {
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: -30px;
+   }
+   
 .row {
     margin-right: auto;
     margin-left: auto;
-    width: 1150px;
+    max-width: 1150px;
     }
 .select2-container--default .select2-selection--multiple {
     border: none;
@@ -103,6 +112,16 @@ text-decoration: underline;
     background-color: #333;
     color: white;
 }
+.select2-container .select2-selection--multiple {
+    box-sizing:border-box;
+    cursor:pointer;
+    display:block;
+    min-height:60px;
+    user-select:none;
+    -webkit-user-select:none;
+    -webkit-box-shadow: 0px 11px 19px 0px rgba(102,153,153,0.29);
+    box-shadow: 0px 11px 19px 0px rgba(102, 153, 153, 0.34);
+   }
 /* #endregion */
 /* #region Jobs*/
 .jobs-container {
