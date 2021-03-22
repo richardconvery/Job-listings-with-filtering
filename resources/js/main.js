@@ -155,6 +155,7 @@ const context = {
       }
   ]
 };
+
 const compiledHtml = template(context);
 
 const displayJobs = document.getElementById('jobs-container');
