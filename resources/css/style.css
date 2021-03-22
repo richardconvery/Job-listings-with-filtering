@@ -24,6 +24,7 @@ h2 {
     padding-top: 12px;
     font-weight: bold;
     font-size: 18px;
+    padding-top: 17px;
     }
 /* #endregion */
 /* #region Header*/
@@ -128,6 +129,9 @@ input.select2-search__field {
     width: 100%;
     display: flex;
 }
+hr {
+    display: none;
+}
 .hover-to-highlight{
     background-color: hsl(180, 29%, 50%);
     height: 100%;
@@ -138,9 +142,6 @@ input.select2-search__field {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: none;
-}
-.jobs-container:hover~.hover-to-highlight {
-    display: inline;
 }
 .job-card {
     -webkit-box-shadow: 0px 11px 19px 0px rgba(102,153,153,0.29);
@@ -155,6 +156,9 @@ input.select2-search__field {
     margin-top: 20px;
     background: white;
     border-radius: 10px;
+}
+.job-card:hover .hover-to-highlight{
+    display: block;
 }
 .company-logo {
     text-align: center;
@@ -314,7 +318,7 @@ li span {
     left: 20px;
     padding-top: 20px;
     width: 90%;
-    top: -10px;
+    top: -30px;
     align-items: unset;
     line-height: 3.5;
     }
@@ -328,6 +332,15 @@ li span {
     position: relative;
     grid-template-columns: 75px 120px 100px;
     }
+hr {
+    display: block;
+    color: black;
+    width: 85%;
+    grid-column: 1 / span 2;
+    border-top: 1px solid lightgrey;
+    top: -15px;
+    position: relative;
+}
 #logo {
     height: 60px;
     position: relative;
@@ -337,5 +350,11 @@ li span {
 #jobs-container {
     margin-top: 40px;
     }
+.select2-selection__clear::after {
+    display: none;
+    }
+.hover-to-highlight {
+    height: 300px;
+}
 }
 /* #endregion */
