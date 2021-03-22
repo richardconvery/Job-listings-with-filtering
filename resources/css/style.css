@@ -31,14 +31,14 @@ header {
     background-color: var(--header-bg);
 }
 .hero-container {
-    width: 1440px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     height: 156px;
     }
 #hero {
-    width: 1400px;
-    max-height: 156px;
+    max-width: 100%;
+    height: 156px;
     }
 /* #endregion */
 /* #region Filters*/
@@ -57,7 +57,7 @@ header {
     }
 .select2-container--default .select2-selection--multiple {
     border: none;
-    height: 60px;
+    min-height: 60px;
     }
 input.select2-search__field {
     display: none;
@@ -84,10 +84,10 @@ input.select2-search__field {
     color: hsl(180, 29%, 50%);
     font-weight: normal;
     display: flex;
-padding-top: 0px;
-padding-right: 20px;
-font-size: 13px;
-text-decoration: underline;
+    padding-top: 0px;
+    padding-right: 20px;
+    font-size: 13px;
+    text-decoration: underline;
 }
 .select2-container--default.select2-container--focus .select2-selection--multiple {
     border: none;
@@ -138,6 +138,9 @@ text-decoration: underline;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: none;
+}
+.jobs-container:hover~.hover-to-highlight {
+    display: inline;
 }
 .job-card {
     -webkit-box-shadow: 0px 11px 19px 0px rgba(102,153,153,0.29);
@@ -278,4 +281,61 @@ li span {
 .tag {
     font-size: 13px;
     }
+/* #endregion */
+/* #region Max width 1180 px*/
+@media (max-width: 1180px) {
+.row {  
+    min-width: 330px;
+    }
+.job-card {
+    width: calc(100% - 60px);
+    margin-left: 30px;
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    grid-template-rows: 0px 150px 1fr;
+    height: auto;
+    }
+.company-logo {
+    text-align: left;
+    grid-column: 1 / span 2;
+    }
+.company-name {
+    padding-top: 40px;
+}
+.job-details {
+    grid-column: 1 / span 2;
+    left: 20px;
+    position: relative;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    max-width: 90%;
+        }
+.tags {
+    justify-content: left;
+    left: 20px;
+    padding-top: 20px;
+    width: 90%;
+    top: -10px;
+    align-items: unset;
+    line-height: 3.5;
+    }
+.job-title {
+    top: -25px;
+    position: relative;
+}
+.job-info {
+    padding-top: 0px;
+    top: -20px;
+    position: relative;
+    grid-template-columns: 75px 120px 100px;
+    }
+#logo {
+    height: 60px;
+    position: relative;
+    top: -26px;
+    left: 20px;
+    }
+#jobs-container {
+    margin-top: 40px;
+    }
+}
 /* #endregion */

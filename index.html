@@ -17,10 +17,9 @@
   <!-- Handlebars for jobs -->
   <script id="jobs" type="text/x-handlebars-template">
     {{#each jobs}}
-      <div id="jobs-container">
         <div class="job-card">
           <div class="hover-to-highlight"></div>
-          <div class="company-logo"><img src="resources/{{this.logo}}" alt="Photosnap"></div>
+          <div class="company-logo"><img id="logo" src="resources/{{this.logo}}" alt="Photosnap"></div>
           <div class="job-details">
             <div class="company-name cyan"><p class="company">{{this.company}}</p>
               <!-- If new is true the display "NEW!" else do nothing -->
@@ -52,7 +51,6 @@
             </div>
           </div>
         </div>
-      </div>      
       {{/each}}
   </script>
 
