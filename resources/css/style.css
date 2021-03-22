@@ -354,7 +354,14 @@ hr {
     display: none;
     }
 .hover-to-highlight {
-    height: 300px;
+    height: 256px;
 }
+}
+/* #endregion */
+/* #region Max width 1180 px*/
+@media (max-width: 518px){
+    .hover-to-highlight {
+        height: 301px;
+    }  
 }
 /* #endregion */
